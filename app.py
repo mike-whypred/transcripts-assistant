@@ -10,6 +10,19 @@ import plotly.graph_objects as go
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 FMP_API_KEY = st.secrets["FMP_API_KEY"]
 
+# Add this near the top of your script, after the imports
+st.set_page_config(page_title="AI Earnings Call Analyst", page_icon="📊", layout="wide")
+
+# Hide the GitHub icon and other default elements
+hide_streamlit_style = """
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+</style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 current_year = datetime.now().year
 SYSTEM_INSTRUCTIONS = f"""
 You are an experienced investment analyst with years of experience in analyzing earnings call transcripts. Your task is to:
