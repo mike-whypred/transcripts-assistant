@@ -11,7 +11,7 @@ openai.api_key = st.secrets["OPENAI_API_KEY"]
 FMP_API_KEY = st.secrets["FMP_API_KEY"]
 
 # Add this near the top of your script, after the imports
-st.set_page_config(page_title="AI Earnings Call Analyst", page_icon="📊", layout="wide")
+st.set_page_config(page_title="AI Earnings Call Analyst", page_icon="📊")
 
 # Hide the GitHub icon and other default elements
 hide_streamlit_style = """
